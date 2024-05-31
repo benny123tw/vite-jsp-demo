@@ -1,0 +1,31 @@
+button {
+  background-color: #FF6347;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #FFA07A;
+  }
+
+  &#back-button {
+    background-color: #3CB371;
+    color: white;
+
+    &:hover {
+      background-color: #66CDAA;
+    }
+  }
+
+  &.btn {
+    background-color: #4169E1;
+    color: white;
+
+    &:hover {
+      background-color: #6495ED;
+    }
+  }
+}
