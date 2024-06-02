@@ -2,6 +2,7 @@ import path from 'node:path'
 import { defineConfig } from 'vite'
 import { globSync } from 'glob'
 import { fileURLToPath } from 'url'
+import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig(({ mode }) => ({
   server: {
@@ -21,4 +22,6 @@ export default defineConfig(({ mode }) => ({
       ),
     },
   },
+  // for resolving tsconfig paths
+  plugins: [tsconfigPaths()],
 }))

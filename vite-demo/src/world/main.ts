@@ -1,6 +1,6 @@
-import './style.scss'
-import { add } from '../utils/number-helper.ts'
-import { wait } from '../utils/promise-helper.ts'
+import '@/world/style.scss'
+import { add } from '@/utils/number-helper.ts'
+import { wait } from '@/utils/promise-helper.ts'
 
 (() => {
   console.log('world/main.ts')
