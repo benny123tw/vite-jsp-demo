@@ -8,6 +8,13 @@
   <version>1.0-SNAPSHOT</version>
   <name>spring_mvc Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  <repositories>
+    <repository>
+      <id>central.manual.testing</id>
+      <url>https://central.sonatype.com/api/v1/publisher/deployments/download</url>
+    </repository>
+  </repositories>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -44,6 +51,12 @@
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
       <version>2.17.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.github.benny123tw</groupId>
+      <artifactId>vite-spring-webmvc</artifactId>
+      <version>0.0.1</version>
     </dependency>
 
   </dependencies>

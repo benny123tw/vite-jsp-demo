@@ -1,4 +1,4 @@
-<%@ taglib prefix="vite" uri="/WEB-INF/tlds/vite-tags" %>
+<%@ taglib prefix="vite" uri="https://github.com/benny123tw/tags" %>
 <jsp:useBean id="message" scope="request" type="java.lang.String"/>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
