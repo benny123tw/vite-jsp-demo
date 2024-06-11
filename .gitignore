@@ -39,4 +39,5 @@ build/
 
 ### Node.js ###
 node_modules/
+src/main/webapp/WEB-INF/dist/
 .env*

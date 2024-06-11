@@ -1,3 +1,10 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: .5rem;
+}
+
 button {
   background-color: #FF6347;
   color: white;
@@ -6,6 +13,11 @@ button {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  display: inline-flex;
+  transition-duration: .15s;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  line-height: 1.5rem;
 
   &:hover {
     background-color: #FFA07A;
@@ -27,5 +39,29 @@ button {
     &:hover {
       background-color: #6495ED;
     }
+  }
+
+  &.disabled, &:disabled {
+    background-color: #808080 !important;
+    color: white !important;
+    cursor: not-allowed !important;
+
+    &:hover {
+      background-color: #808080 !important;
+    }
+  }
+
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
