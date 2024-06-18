@@ -6,6 +6,7 @@
     <vite:import entry="src/world/main.ts"/>
 </head>
 <body>
+<div id="text"></div>
 <h1>This is message from JSP: ${message}</h1>
 
 <div class="container">
@@ -14,5 +15,6 @@
     <button class="btn" id="world-button">World</button>
 </div>
 
+<div id="random-number"></div>
 </body>
 </html>

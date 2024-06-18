@@ -1,12 +1,16 @@
 import '@/world/style.scss'
 import { add } from '@/utils/number-helper.ts'
 import { wait } from '@/utils/promise-helper.ts'
+import { replaceText, updateText } from '@/utils/update-text.ts'
 
 (() => {
+  updateText()
+  replaceText()
+
   console.log('world/main.ts')
   console.log('Hello World!')
 
-  const result = add(1, 2)
+  const result = add(1, 3)
   console.log('1 + 2 =', result)
 
   const backButton = document.querySelector('button#back-button')
