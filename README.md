@@ -10,6 +10,7 @@ Ensure you have the following installed:
 
 - Java 8 or higher
 - Node.js and pnpm
+- Docker (optional, for running the application in a container)
 
 ### Installation
 
@@ -32,7 +33,7 @@ Ensure you have the following installed:
 
 ### Running the Application
 
-#### Start the Spring MVC server
+#### Start the Spring MVC server with IDE
 
 In this project, we will use IDEA to run the Spring MVC server. You could configure the server with
 your preferred IDE.
@@ -68,14 +69,7 @@ VITE v5.2.12  ready in 3434 ms
 JAVA 1.8  plugin v0.0.1
 ```
 
-or run the following command to build the front-end assets for production mode:
-
-```sh
-cd vite-demo
-pnpm build
-```
-
-### Building for Production
+#### Build and run in production mode
 
 1. **Build the frontend assets**:
    ```sh
@@ -87,6 +81,28 @@ pnpm build
    ```sh
    ./mvnw package
    ```
+
+3. **Run the backend**:
+   ```sh
+   java -jar target/your-app-name.war --spring.profiles.active=prod
+   ```
+
+### Running the Application with Docker
+
+You can also run the application using Docker:
+
+1. **Build the Docker image**:
+   ```sh
+   docker build -t spring_mvc .
+   ```
+
+2. **Run the Docker container**:
+   ```sh
+   docker run -d -p 8989:8080 -e "SPRING_PROFILES_ACTIVE=prod" spring_mvc
+   ```
+
+3. **Access the application**:
+   Open your browser and navigate to `http://localhost:8989/spring_mvc/hello`
 
 ### Project Structure
 
@@ -104,6 +120,17 @@ pnpm build
 - **vite-demo**: Contains the Vite project
     - **src**: Frontend source files
 
+## Profiles
+
+This project uses Spring profiles to manage environment-specific configurations. The available
+profiles are:
+
+- **dev**: For development environment. Uses `application-dev.properties`.
+- **prod**: For production environment. Uses `application-prod.properties`.
+- **default**: Fallback configuration. Uses `application.properties`.
+
+You can activate a profile by setting the `spring.profiles.active` environment variable.
+
 ## Contributing
 
 Contributions are welcome! Please submit a pull request or open an issue for any bugs or feature
@@ -115,9 +142,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Acknowledgements
 
-Inspired by:
-
 - [Spring Framework](https://spring.io/projects/spring-framework)
 - [Vite](https://vitejs.dev/)
-
-Feel free to customize this README further to better suit your project's needs.
