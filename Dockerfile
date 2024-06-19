@@ -5,9 +5,6 @@ RUN corepack enable
 # Set working directory
 WORKDIR /app
 
-RUN apk update
-RUN apk add git --no-cache
-
 # Copy Vite project files
 COPY vite-demo/package.json ./
 COPY vite-demo/pnpm-lock.yaml ./
@@ -34,16 +31,16 @@ COPY --from=vite-builder /src/main/webapp/WEB-INF/dist ./src/main/webapp/WEB-INF
 RUN mvn clean package
 
 # Stage 3: Run the application
-FROM openjdk:8-jdk-alpine
+FROM tomcat:9.0.89-jre8
 
 # Set working directory
 WORKDIR /app
 
 # Copy the WAR file from the Maven build stage
-COPY --from=maven-builder /app/target/demo-app.war ./app.war
+COPY --from=maven-builder /app/target/spring_mvc.war /usr/local/tomcat/webapps/
 
 # Expose the application port
 EXPOSE 8080
 
 # Run the application
-ENTRYPOINT ["java", "-jar", "app.war"]
+CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
