@@ -7,7 +7,7 @@
 </head>
 <body>
 <div id="text"></div>
-<h1>This is message from JSP: ${message}</h1>
+<h1>JSP message: ${message}</h1>
 
 <div class="container">
     <button id="back-button">Back</button>

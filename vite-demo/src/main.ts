@@ -18,7 +18,22 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <p class="read-the-docs">
       Click on the Vite and TypeScript logos to learn more
     </p>
+    <p class="read-the-docs">
+      Submit a name to navigate to the next page
+    </p>
   </div>
 `
 
 setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+
+document.querySelector<HTMLButtonElement>('button[type=submit]')?.addEventListener('click', (e) => {
+  const input = document.querySelector<HTMLInputElement>('input')
+
+  if (!input?.value) {
+    e.preventDefault()
+    input?.classList.add('error')
+    input?.addEventListener('input', () => {
+      input.classList.remove('error')
+    })
+  }
+})
