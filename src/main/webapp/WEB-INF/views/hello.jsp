@@ -10,9 +10,11 @@
 <body>
 
 <div id="app"></div>
-<form:form action="/spring_mvc/world" method="post" modelAttribute="form">
-    <form:input path="name"/>
-    
+<form:form id="greeting-form" action="/spring_mvc/world" method="post" modelAttribute="form">
+    <div class="form-group">
+        <form:label path="name">Greeting to?</form:label>
+        <form:input path="name" />
+    </div>
     <form:button>Submit</form:button>
 </form:form>
 

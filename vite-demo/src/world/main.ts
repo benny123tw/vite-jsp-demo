@@ -16,7 +16,7 @@ import { replaceText, updateText } from '@/utils/update-text.ts'
   const backButton = document.querySelector('button#back-button')
   const helloButton = document.querySelector('button#hello-button')
   const worldButton = document.querySelector('button#world-button')
-  console.log('__java_vite_placeholder__')
+  console.log('Java Vite Placeholder', '__java_vite_placeholder__')
 
   if (backButton) {
     backButton.addEventListener('click', async () => {
@@ -25,7 +25,7 @@ import { replaceText, updateText } from '@/utils/update-text.ts'
       <path style="opacity:.75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
     </svg>` + backButton.innerHTML
 
-      backButton.attributes.setNamedItem(document.createAttribute('disabled'))
+      backButton.setAttribute('disabled', 'true')
       await wait(3000)
       window.history.back()
     })
@@ -33,7 +33,7 @@ import { replaceText, updateText } from '@/utils/update-text.ts'
 
   if (worldButton) {
     worldButton.addEventListener('click', async () => {
-      const { deepMerge } = await import('../utils/config-helper.ts')
+      const { deepMerge } = await import('@/utils/config-helper.ts')
       const objectA = { a: 1, b: { c: 2 } }
       const objectB = { b: { d: 3 }, e: 4 }
 
@@ -53,6 +53,7 @@ import { replaceText, updateText } from '@/utils/update-text.ts'
       const imageModule = await import('/bg_01.png')
       const image = document.createElement('img')
       image.src = imageModule.default
+      image.classList.add('small')  // Add this line to apply the small class
       document.body.appendChild(image)
     })
   }
