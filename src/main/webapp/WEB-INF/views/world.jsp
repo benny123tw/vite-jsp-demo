@@ -7,6 +7,7 @@
 </head>
 <body>
 
+<div id="text"></div>
 <h1>JSP message: ${message}</h1>
 
 <div class="container">
