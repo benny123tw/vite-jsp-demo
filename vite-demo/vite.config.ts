@@ -14,14 +14,14 @@ export default defineConfig({
     java({
       javaProjectBase: '../',
       
-      // This should match the resource handler configuration in your Spring MVC application.
+      // This should be your application context path + resource handler configuration in your Spring MVC application.
       // Example:
       // @Override
       // public void addResourceHandlers(ResourceHandlerRegistry registry) {
       //     registry.addResourceHandler("/resources/**")
       //             .addResourceLocations("/WEB-INF/dist/");
       // }
-      buildDirectory: 'resources',
+      buildDirectory: 'spring_mvc/resources',
 
       // The directory in the Vite project that is treated as the public directory.
       // Static assets in this directory are served directly at the root level.
