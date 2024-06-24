@@ -13,7 +13,7 @@ export default defineConfig({
     tsconfigPaths(),
     java({
       javaProjectBase: '../',
-      
+
       // This should be your application context path + resource handler configuration in your Spring MVC application.
       // Example:
       // @Override

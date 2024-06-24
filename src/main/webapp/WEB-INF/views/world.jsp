@@ -1,7 +1,9 @@
 <%@ taglib prefix="vite" uri="https://github.com/benny123tw/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:useBean id="message" scope="request" type="java.lang.String"/>
 <html>
 <head>
+    <link rel="icon" type="image/x-icon" href="<c:url value="/resources/icon.svg"/>">
     <title>World</title>
     <vite:import entry="src/world/main.ts"/>
 </head>

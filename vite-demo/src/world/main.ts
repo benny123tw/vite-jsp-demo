@@ -8,7 +8,6 @@ import { replaceText, updateText } from '@/utils/update-text.ts'
   replaceText()
 
   console.log('world/main.ts')
-  console.log('Hello World!')
 
   const result = add(1, 3)
   console.log('1 + 2 =', result)

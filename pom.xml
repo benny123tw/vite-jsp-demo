@@ -24,6 +24,12 @@
     </dependency>
 
     <dependency>
+      <groupId>jstl</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
+
+    <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
       <version>5.3.12</version>
@@ -48,47 +54,5 @@
       </plugin>
     </plugins>
   </build>
-
-  <!--  <profiles>-->
-  <!--    <profile>-->
-  <!--      <id>prod</id>-->
-  <!--      <build>-->
-  <!--        <resources>-->
-  <!--          <resource>-->
-  <!--            <directory>src/main/resources</directory>-->
-  <!--            <includes>-->
-  <!--              <include>application-prod.properties</include>-->
-  <!--            </includes>-->
-  <!--          </resource>-->
-  <!--        </resources>-->
-  <!--      </build>-->
-  <!--    </profile>-->
-  <!--    <profile>-->
-  <!--      <id>dev</id>-->
-  <!--      <build>-->
-  <!--        <resources>-->
-  <!--          <resource>-->
-  <!--            <directory>src/main/resources</directory>-->
-  <!--            <includes>-->
-  <!--              <include>application-dev.properties</include>-->
-  <!--            </includes>-->
-  <!--          </resource>-->
-  <!--        </resources>-->
-  <!--      </build>-->
-  <!--    </profile>-->
-  <!--    <profile>-->
-  <!--      <id>default</id>-->
-  <!--      <build>-->
-  <!--        <resources>-->
-  <!--          <resource>-->
-  <!--            <directory>src/main/resources</directory>-->
-  <!--            <includes>-->
-  <!--              <include>application.properties</include>-->
-  <!--            </includes>-->
-  <!--          </resource>-->
-  <!--        </resources>-->
-  <!--      </build>-->
-  <!--    </profile>-->
-  <!--  </profiles>-->
 
 </project>
