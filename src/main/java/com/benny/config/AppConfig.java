@@ -1,6 +1,6 @@
 package com.benny.config;
 
-import io.github.benny123tw.servlet.annotation.EnableVite;
+import com.javite.spring.annotation.EnableVite;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScan.Filter;

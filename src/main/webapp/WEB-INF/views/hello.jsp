@@ -1,7 +1,7 @@
 <jsp:useBean id="env" scope="request" type="java.lang.String"/>
 <jsp:useBean id="app_name" scope="request" type="java.lang.String"/>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib prefix="vite" uri="https://github.com/benny123tw/tags" %>
+<%@ taglib prefix="vite" uri="https://javite.com/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
